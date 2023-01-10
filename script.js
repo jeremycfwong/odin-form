@@ -16,9 +16,11 @@ emailElement.addEventListener('input', (_) => {
 var zipcodeElement = document.getElementById('zipcode');
 zipcodeElement.pattern = `\\d{5,5}`;
 
+var passwordElement = document.getElementById('password');
+passwordElement.setAttribute('minlength', '8');
 
 function validateMyForm() {
-    var passwordElement = document.getElementById('password');
+    
     var cfmPasswordElement = document.getElementById('cfm-password');
 
     if (passwordElement.value == cfmPasswordElement.value 
